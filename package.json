@@ -1,0 +1,52 @@
+{
+  "name": "bluesoft-wrapper",
+  "version": "1.0.0",
+  "description": "A wrapper to work with Bluesoft Cosmos API",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "npm test -- --watch",
+    "test:coverage": "nyc npm test",
+    "prepare": "husky install"
+  },
+  "nyc": {
+    "functions": 80,
+    "lines": 80,
+    "check-coverage": true,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrohbernini/bluesoft-wrapper.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "Pedro Bernini <pedrohbernini@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedrohbernini/js-tdd/issues"
+  },
+  "homepage": "https://github.com/pedrohbernini/js-tdd#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.3.0",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^5.1.3",
+    "mocha": "^8.3.0",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.4"
+  }
+}
